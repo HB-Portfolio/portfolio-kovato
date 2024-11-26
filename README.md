@@ -1,55 +1,64 @@
 # Kovato Website
 
-## Project Overview
-Kovato is the future of web design and development, offering a subscription-based model for businesses to access high-quality, customized web and app solutions without the need for large upfront costs. This project involves building the Kovato website from scratch using Nuxt3 and TailwindCSS, following a brand guide to deliver a cohesive and professional online presence.
+**Visit Kovato**  
+[https://kovato.vercel.app](https://kovato.vercel.app)
 
-The Kovato website is essential to launching the business. It showcases a full integration of brand, design, and development, demonstrating my ability to build a fully functional platform. This includes CRUD operations, user authentication, database integration with row-level security (RLS), and features like sign-ins, bill payments, and account management. The website aims to be user-friendly, responsive, and secure.
+**Author**: Hendrich Bührer
 
-## Technologies Used
-- **Nuxt3**: A modern framework for building web applications with Vue.js, used to create the structure and logic for the website.
-- **TailwindCSS**: A utility-first CSS framework used for responsive styling and ensuring a mobile-friendly user experience.
-- **Supabase**: Used for backend services, including user authentication, database integration, and RLS to ensure data security.
+## Overview
+
+The Kovato Website is built entirely from scratch using Nuxt 3 and TailwindCSS. It offers a subscription-based model for businesses to access high-quality, custom web and app solutions without a large upfront cost. The website integrates the Kovato brand's identity, emphasizing flexibility, and an affordable alternative to traditional web development.
+
+The Kovato website is essential for launching the Kovato business, showcasing the integration of brand, design, and development. This fully functional platform includes features like CRUD operations, user authentication, database integration with row-level security (RLS), and functions for user sign-ins, bill payments, and account management.
 
 ## Project Goals
-- **Custom Website Design**: Build a website that aligns with the Kovato brand guide, emphasizing custom design over templates or pre-built themes.
-- **User Authentication and Payments**: Implement a user account system for managing personal details, signing up for plans, and making bill payments. Supabase is used for authentication, ensuring security throughout the process.
-- **Database Integration**: Integrate with Supabase for data management, utilizing row-level security to protect user data. The implementation of RLS ensures each user only accesses their data.
-- **Company Portfolio and Contact**: Create sections for the company portfolio and a contact form, maintaining consistency with the brand guide.
-- **Performance and Optimization**: Ensure the site is fast, secure, and optimized for SEO to improve visibility.
+
+The main goals of this project, as laid out in my original proposal, are:
+
+- **Custom Website Design**: Develop a custom-built website, based on the Kovato brand guide, that demonstrates my design capabilities and provides a cohesive user experience.
+- **User Authentication and Payments**: Set up secure user accounts for sign-ins, billing, and plan management using Supabase for authentication and data security.
+- **Database Integration**: Integrate with Supabase to manage user data, utilizing row-level security (RLS) to maintain privacy and control.
+- **Portfolio and Contact Section**: Include a company portfolio and contact form that adheres to the brand's identity and user-friendly interface.
+- **SEO and Optimization**: Ensure that the site is fast, responsive, secure, and optimized for search engines.
 
 ## Key Features and Commits
-### feat: Implemented key features and refinements for Kovato project
-- **Navigation Menu**:
-  - Added a responsive navigation menu with toggle functionality for mobile devices.
-  - Integrated sliding animation for the dropdown menu using Vue's 'transition' component for a smooth user experience.
-  - Fixed issues with 'max-height' transitions to achieve smooth sliding effects.
-  - Added event handling for window resize to automatically close the mobile menu when switching to larger screens.
 
-- **Plans Summary and Legal Page**:
-  - Developed content for Regular and Premium plans, highlighting each plan's features.
-  - Drafted a Licensing Terms page with detailed clauses, tailored to the requirements in Alberta, Canada.
-  - Included provisions for subscription terms, buyout options, and jurisdiction.
+### feat: Implemented key features and refinements for Kovato project
+
+- **Navigation Menu**:
+  - Added a responsive navigation menu with a toggle function for mobile users.
+  - Integrated sliding animation for dropdowns using Vue's `transition` component to improve user experience.
+  - Corrected 'max-height' transitions for a smooth sliding effect.
+  - Managed window resize events to automatically close the mobile menu on larger screens.
+
+- **Plans Summary and Licensing Page**:
+  - Developed the content for Regular and Premium plans, emphasizing each plan’s features.
+  - Created a Licensing Terms page with specific clauses for Alberta, Canada.
+  - Included important details about subscription requirements, buyout options, and jurisdiction coverage.
 
 - **Thank You Page**:
-  - Designed a simple thank-you page with responsive elements.
-  - Maintained a minimalist and clean layout consistent with the Kovato branding.
+  - Designed a responsive thank-you page with minimalist elements consistent with the Kovato branding.
+  - Ensured that all components align well across different screen sizes.
 
-- **General Refinements**:
-  - Enhanced project structure to improve responsiveness across all components.
-  - Refined content for clarity, ensuring a better overall user experience.
+- **General Improvements**:
+  - Enhanced project structure to ensure proper responsiveness across the entire website.
+  - Refined content for a clearer and more engaging experience for visitors.
 
 ### feat(navbar): Implemented and enhanced responsive hamburger menu for navigation
+
 - **Mobile Menu Enhancements**:
   - Added a hamburger menu button for mobile views, with clear SVG icons indicating open/close states.
   - Implemented a sliding dropdown menu below the navbar, ensuring the correct width and adding shadow effects to enhance visual appeal.
   - Ensured the hamburger menu closes upon clicking a link by adding the `@click="closeMenu"` event.
   - Fixed the dropdown behavior to avoid stretching the navbar, maintaining consistency in width and overall styling.
+  
 - **JavaScript and Lifecycle Improvements**:
   - Added JavaScript to handle window resizing, automatically closing the dropdown on larger viewports.
   - Refactored toggle and close functions to make them more reusable.
   - Managed window event listeners through Vue lifecycle hooks for optimal performance.
 
 ## Project Features
+
 ### Regular Plan
 - Custom Website Design
 - Integration with Social Media
@@ -75,7 +84,44 @@ The Kovato website is essential to launching the business. It showcases a full i
 The home page allows users to "See All" features of both Regular and Premium plans. The button navigates to the Pricing page, where users can explore all features and compare plans in detail.
 
 ## User Authentication and Billing
-The Kovato website integrates with Supabase to provide secure user authentication and database management. Users can sign up, log in, manage their details, and subscribe to website plans. The billing system is designed to accommodate recurring payments, allowing users to access services without needing large initial payments. Plans can be upgraded or canceled based on the user's requirements, with options for subscription buyout or transferring ownership at the end of the contract.
 
-## Author
-This project was developed by me (Hendrich Bührer) as part of the second portfolio piece assignment. It showcases the ability to design, develop, and integrate a cohesive web solution while following branding guidelines. All commits and feature implementations were aimed at delivering a full-fledged functional platform for Kovato, suitable for launching the business and serving as a portfolio highlight.
+The Kovato website integrates with Supabase to provide secure user authentication and billing management. Users can sign in, manage their details, and view their subscription plan directly from the dashboard. Billing functionality is set up to include payment options, though the current release includes placeholders for upcoming payment gateways.
+
+## File Structure
+
+- **pages/index.vue**: Main landing page that explains the value of Kovato, with sections on features, plans, and about the founder.
+- **pages/pricing.vue**: The pricing page, featuring detailed comparisons between the Regular and Premium plans, with expandable feature lists.
+- **pages/dashboard.vue**: User dashboard where customers can manage their profile, view billing info, and upgrade their plan.
+- **components/AuthModal.vue**: Handles user sign-in and sign-up processes with Supabase integration.
+- **components/Navbar.vue**: The top navigation menu, responsive for both mobile and desktop views.
+- **components/PlanCard.vue**: Displays individual plans on the pricing page with a "See More" expandable feature list.
+
+## Challenges Addressed
+
+### Responsive Navigation Menu
+Creating a seamless navigation experience across different screen sizes took considerable refinement, particularly handling mobile toggle behavior and window resizing events. Addressed by leveraging Vue's lifecycle hooks and scoped CSS.
+
+### Supabase Integration
+Integrating Supabase for authentication, user profile creation, and billing data required implementing Row-Level Security (RLS) to ensure user data privacy. The SQL policies for RLS were implemented directly in Supabase to ensure each user could only access their information.
+
+### User-Friendly Plan Comparison
+The expandable "See More" sections for plan features were designed to be easy for users to understand and compare. Vue's reactivity was crucial in ensuring that expanding one plan's features did not affect the layout of the other plan.
+
+## Time Estimate
+
+The project wrapped up within the planned 25-30 hours:
+
+- **UI and Design Implementation**: 8 hours.
+- **Supabase Integration (Authentication & Database)**: 7 hours.
+- **Feature Development for Plans and Billing**: 6 hours.
+- **Navigation and Responsive Design**: 5 hours.
+- **Testing and Bug Fixes**: 4 hours.
+
+## Delivery
+
+The Kovato website is live at [https://kovato.vercel.app](https://kovato.vercel.app). The source code is also available on GitHub, and I've included this detailed write-up as part of the submission for my portfolio.
+
+## Portfolio Integration
+
+The Kovato website is a key piece in my portfolio, demonstrating my ability to develop a full-scale web platform with modern technologies. It's included as a standalone project showcasing the integration of user experience, branding, and backend functionality.
+
